@@ -1,0 +1,18 @@
+pm2 start ecosystem.config.js
+# 启动
+
+pm2 status # 查看进程状态
+pm2 logs myapp # 查看日志
+pm2 restart myapp # 重启进程
+pm2 stop myapp # 停止进程
+pm2 delete myapp # 删除进程
+
+pm2 save          # 保存当前运行的进程列表（生成 dump.pm2）
+pm2 resurrect     # 恢复保存的进程（对应脚本里的命令）
+pm2 list          # 查看当前所有 PM2 进程
+pm2 kill          # 停止所有 PM2 进程（包括守护进程）
+
+# 正确的首次使用流程：
+pm2 start ecosystem.config.js   # 启动应用
+pm2 save                          # 保存进程列表
+# 然后再把 .bat 脚本加入开机启动
