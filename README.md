@@ -12,7 +12,7 @@
 
 使用方式
 一 运行项目
-1. 直接运行  python app.py
+1. 直接运行  python app-v2.py
 2. 使用pm2运行项目
 ![img.png](imgs/img2.png)
 
